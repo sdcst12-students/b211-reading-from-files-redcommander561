@@ -9,9 +9,24 @@ Example:
 assert find('apple') == 0
 assert find('fish') == 5
 '''
-def find(needle):
-    pass
+#apple
+#banana
+#cookie
+#fruit
+#cherries
+#fish
 
+
+def find(needle):
+    filename = 'task01.txt'
+    file = open(filename,'r')
+    data = file.read()
+    print(data)
+    myList = data.split('\n')
+    x = myList.index(needle)
+    print(x)
+    return x
+    
 
 if __name__ == "__main__":
     assert find('apple') == 0
