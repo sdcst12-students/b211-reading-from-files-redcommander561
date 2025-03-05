@@ -29,12 +29,11 @@ def target(lvl,ac):
     row = rows[level - 1].split()
   
     ac_index = ac.index(armorclass)
-    target_number = row(ac_index)
+    target_number = row[ac_index]
     
     print(f"To hit AC {armorclass} at level {level}, you need: {target_number}")
 
     return 
-
 
 def tests():
     assert target(3,7) == 23

@@ -13,15 +13,19 @@ file = open(filename,'r')
 data = file.read()
 print(data)
 
-clusters = data.strip().split('\n\n')
+#also google helped me out with data.strip, which removes extra whitespaces from the start and end of the data
+b = data.strip().split('\n\n')
 
 large = 0
 
-for cluster in clusters:
+for a in b:
     
-    points = list(int, cluster.split())
+    #map is pretty cool when you want to apply a function to every item in an iterable list. 
+    #https://stackoverflow.com/questions/69573663/how-to-iterate-over-a-list-of-lists-using-pythons-map-function
+
+    highscore = list(map(int, a.split()))
     
-    x = sum(points)
+    x = sum(highscore)
     
     if x > large:
         large = x
